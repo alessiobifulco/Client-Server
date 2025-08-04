@@ -4,11 +4,11 @@ Progetto per il corso di Programmazione di Reti che implementa un sistema di cha
 
 ---
 
-## 🎯 Obiettivo del Progetto
+## Obiettivo del Progetto
 
 L'obiettivo è sviluppare un'applicazione di chat funzionante che permetta a più utenti di comunicare simultaneamente all'interno di una stanza di discussione condivisa. Il sistema è composto da un server centralizzato in grado di gestire connessioni multiple e da client dotati di interfaccia grafica per l'interazione.
 
-## 🏛️ Architettura del Sistema
+## Architettura del Sistema
 
 L'applicazione si basa su una classica architettura **client-server**:
 
@@ -17,7 +17,7 @@ L'applicazione si basa su una classica architettura **client-server**:
 
 Per gestire la concorrenza e la comunicazione asincrona, il sistema fa largo uso del **multithreading**.
 
-## ⚙️ Funzionamento
+## Funzionamento
 
 ### Server
 Il server, una volta avviato, si mette in ascolto di nuove connessioni in entrata. Per ogni client che si connette, il server crea un **thread dedicato** per gestire la comunicazione con quel client specifico. Questo approccio permette di servire più client contemporaneamente senza che uno blocchi gli altri. Quando un messaggio viene ricevuto da un client, il server lo ritrasmette a tutti gli altri client presenti nella sua lista di connessioni attive.
@@ -27,12 +27,12 @@ Il client, dotato di un'interfaccia grafica, stabilisce una connessione con il s
 1.  Un **thread principale** per l'interfaccia grafica e l'invio dei messaggi scritti dall'utente.
 2.  Un **thread secondario** che si mette costantemente in ascolto di messaggi in arrivo dal server, permettendo di ricevere e visualizzare i messaggi degli altri utenti in modo asincrono, senza bloccare l'interfaccia.
 
-## 🛠️ Tecnologie Utilizzate
+## Tecnologie Utilizzate
 
 * **Linguaggio:** Python 3.x
 * **Comunicazione di Rete:** Modulo `socket` (Socket Programming) per la gestione della comunicazione a basso livello su protocollo TCP.
 * **Concorrenza:** Modulo `threading` per la gestione di connessioni e processi multipli sia sul server che sul client.
 * **Interfaccia Grafica (GUI):** Libreria `Tkinter`, inclusa nella distribuzione standard di Python, per la creazione dell'interfaccia utente del client.
 
-## 👤 Contatti
+## Contatti
 * Alessio Bifulco: `alessio.bifulco@studio.unibo.it`
